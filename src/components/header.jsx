@@ -25,8 +25,6 @@ const Header = () => {
 
   useEffect(() => {
     document.getElementById("nav").addEventListener("mouseenter", () => {
-      // setwidth("60px");
-      // setvisibility()
       setisItemVisible(true);
     });
     document.getElementById("nav").addEventListener("mouseleave", () => {
