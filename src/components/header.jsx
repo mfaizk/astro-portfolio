@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import menu from "../assets/menu.svg";
 import cross from "../assets/cross.svg";
 import home from "../assets/navIcon/home.svg";
