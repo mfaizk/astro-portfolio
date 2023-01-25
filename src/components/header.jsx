@@ -81,6 +81,11 @@ const Header = () => {
           {/* nav-item-start */}
           <div
             className={`relative left-[20%] flex flex-row gap-5 justify-center items-center  w-[150px] p-3  rounded transition-all ease-in-out delay-150 hover:bg-[#b288ecf1] duration-200`}
+            onClick={() => {
+              document
+                .getElementById("skill")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
           >
             <img src={skill} alt="" color="#fff" />
             <h1
@@ -169,6 +174,11 @@ const Header = () => {
           {/* nav-item-start */}
           <div
             className={`relative left-[20%] flex flex-row gap-5 justify-center items-center  w-[150px] p-3  rounded transition-all ease-in-out delay-150 hover:bg-[#b288ecf1] duration-200`}
+            onClick={() => {
+              document
+                .getElementById("skill")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
           >
             <img src={skill} alt="" color="#fff" />
             <h1 className={`mt-1 w-[100px]`}>SKILL</h1>

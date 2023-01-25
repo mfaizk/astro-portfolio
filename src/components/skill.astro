@@ -1,0 +1,96 @@
+---
+const { id } = Astro.props;
+import html from "../assets/skillAssets/html.svg";
+import api from "../assets/skillAssets/api.svg";
+import css from "../assets/skillAssets/css.svg";
+import firebase from "../assets/skillAssets/firebase.svg";
+import git from "../assets/skillAssets/git.svg";
+import javascript from "../assets/skillAssets/javascript.svg";
+import react from "../assets/skillAssets/react.svg";
+import vscode from "../assets/skillAssets/vscode.svg";
+---
+
+<div
+  id={id}
+  class="bg-[#f7f7f7] mx-auto flex items-center justify-center flex-col mt-[250px]"
+>
+  <div
+    class="flex flex-row items-center justify-center text-[#333333] ml-3 gap-5 self-start relative right-[0px] xl:left-[450px] md:left-[150px] lg:right-[900px]"
+  >
+    <div class="w-[30px] h-[1px] bg-black rounded-xl min-w-fit"></div>
+    <h1 class="text-[13px] font-serif">CHECK OUT MY</h1>
+  </div>
+  <h1
+    class="flex flex-row items-center justify-center text-[#333333] ml-3 self-start relative right-[0px] xl:left-[450px] md:left-[150px] lg:right-[900px] text-3xl mt-4"
+  >
+    SKILLS
+  </h1>
+  <div
+    class="max-w-[900px] bg-[#ffffff] mt-10 text-2xl font-serif text-[#333333] p-10 rounded-3xl flex flex-row gap-20 flex-wrap items-center justify-center lg:justify-start"
+  >
+    <!-- card-start -->
+    <div
+      class="bg-white p-2 text-center rounded-md transition-all ease-linear delay-150 hover:shadow-2xl border duration-300 flex items-center justify-center flex-col w-[85px] h-[85px]"
+    >
+      <img src={html} alt="" class="h-[30px] text-[#333333]" />
+      <h3 class="text-[10px] font-bold">HTML</h3>
+    </div>
+    <!-- card-end -->
+    <!-- card-start -->
+    <div
+      class="bg-white p-2 text-center rounded-md delay-150 hover:shadow-2xl border duration-300 flex items-center justify-center flex-col w-[85px] h-[85px]"
+    >
+      <img src={api} alt="" class="h-[30px] text-[#333333]" />
+      <h3 class="text-[10px] font-bold">REST API</h3>
+    </div>
+    <!-- card-end -->
+    <!-- card-start -->
+    <div
+      class="bg-white p-2 text-center rounded-md delay-150 hover:shadow-2xl border duration-300 flex items-center justify-center flex-col w-[85px] h-[85px]"
+    >
+      <img src={css} alt="" class="h-[30px] text-[#333333]" />
+      <h3 class="text-[10px] font-bold">CSS</h3>
+    </div>
+    <!-- card-end -->
+    <!-- card-start -->
+    <div
+      class="bg-white p-2 text-center rounded-md delay-150 hover:shadow-2xl border duration-300 flex items-center justify-center flex-col w-[85px] h-[85px]"
+    >
+      <img src={firebase} alt="" class="h-[30px] text-[#333333]" />
+      <h3 class="text-[10px] font-bold">FIREBASE</h3>
+    </div>
+    <!-- card-end -->
+    <!-- card-start -->
+    <div
+      class="bg-white p-2 text-center rounded-md delay-150 hover:shadow-2xl border duration-300 flex items-center justify-center flex-col w-[85px] h-[85px]"
+    >
+      <img src={git} alt="" class="h-[30px] text-[#333333]" />
+      <h3 class="text-[10px] font-bold">GIT</h3>
+    </div>
+    <!-- card-end -->
+    <!-- card-start -->
+    <div
+      class="bg-white p-2 text-center rounded-md delay-150 hover:shadow-2xl border duration-300 flex items-center justify-center flex-col w-[85px] h-[85px]"
+    >
+      <img src={javascript} alt="" class="h-[30px] text-[#333333]" />
+      <h3 class="text-[10px] font-bold">JAVASCRIPT</h3>
+    </div>
+    <!-- card-end -->
+    <!-- card-start -->
+    <div
+      class="bg-white p-2 text-center rounded-md shadow-2xl border flex items-center justify-center flex-col w-[85px] h-[85px]"
+    >
+      <img src={react} alt="" class="h-[30px] text-[#333333]" />
+      <h3 class="text-[10px] font-bold">REACT</h3>
+    </div>
+    <!-- card-end -->
+    <!-- card-start -->
+    <div
+      class="bg-white p-2 text-center rounded-md shadow-2xl border flex items-center justify-center flex-col w-[85px] h-[85px]"
+    >
+      <img src={vscode} alt="" class="h-[30px] text-[#333333]" />
+      <h3 class="text-[10px] font-bold">VSCODE</h3>
+    </div>
+    <!-- card-end -->
+  </div>
+</div>
