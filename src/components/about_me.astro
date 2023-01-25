@@ -1,0 +1,32 @@
+---
+const { id } = Astro.props;
+---
+
+<div
+  id={id}
+  class="bg-[#f7f7f7] mx-auto flex items-center justify-center flex-col"
+>
+  <div
+    class="flex flex-row items-center justify-center text-[#333333] ml-3 gap-5 self-start relative right-[0px] xl:left-[450px] md:left-[150px] lg:right-[900px]"
+  >
+    <div class="w-[30px] h-[1px] bg-black rounded-xl min-w-fit"></div>
+    <h1 class="text-[13px] font-serif">SOME INFO</h1>
+  </div>
+  <h1
+    class="flex flex-row items-center justify-center text-[#333333] ml-3 self-start relative right-[0px] xl:left-[450px] md:left-[150px] lg:right-[900px] text-3xl mt-4"
+  >
+    ABOUT ME
+  </h1>
+  <div
+    class="max-w-[900px] bg-[#ffffff] mt-10 text-2xl font-serif text-[#333333] p-10 rounded-3xl shadow border"
+  >
+    I'm a front-end web developer with a background in computer systems. My
+    training Bootcamp of Ineuron full stack Javascript by Hitesh Choudhary has
+    given me a strong foundation for web development and building complex
+    solutions. Recently, I am final year student of Babu Banarasi Das
+    University. I am passionate about <span class="text-[#8444df]">
+      coding and solving problems</span
+    > through code, and I am excited to work alongside other amazing programmers
+    and learn so much more!
+  </div>
+</div>

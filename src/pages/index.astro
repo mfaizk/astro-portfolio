@@ -2,9 +2,11 @@
 import Home from "../layouts/home.astro";
 import Header from "../components/header.jsx";
 import Hero from "../components/hero.astro";
+import AboutMe from "../components/about_me.astro";
 ---
 
 <Home>
   <Header client:load />
-  <Hero />
+  <Hero id={"hero"} />
+  <AboutMe id={"about"} />
 </Home>
