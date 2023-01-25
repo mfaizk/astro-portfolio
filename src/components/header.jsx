@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import menu from "../assets/menu.svg";
 import cross from "../assets/cross.svg";
 import home from "../assets/navIcon/home.svg";
@@ -8,29 +8,7 @@ import work from "../assets/navIcon/work.svg";
 import contact from "../assets/navIcon/contact.svg";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentMenu, setCurrentMenu] = useState("-translate-x-[350px]");
   const [isItemVisible, setisItemVisible] = useState(false);
-
-  const menuToggler = () => {
-    if (currentMenu === "-translate-x-[0px]") {
-      setIsMenuOpen(false);
-
-      setCurrentMenu("-translate-x-[350px]");
-    } else {
-      setIsMenuOpen(true);
-
-      setCurrentMenu("-translate-x-[0px]");
-    }
-  };
-
-  useEffect(() => {
-    document.getElementById("nav").addEventListener("mouseenter", () => {
-      setisItemVisible(true);
-    });
-    document.getElementById("nav").addEventListener("mouseleave", () => {
-      setisItemVisible(false);
-    });
-  }, []);
 
   return (
     <>
@@ -39,13 +17,21 @@ const Header = () => {
         src={isMenuOpen ? cross : menu}
         alt=""
         className="md:hidden flex absolute h-6 right-10 top-10"
-        onClick={menuToggler}
+        onClick={() => {
+          setIsMenuOpen(!isMenuOpen);
+        }}
       />
       {/* Toggler-END */}
       {/* Big-Scrren-nav-start */}
       <div
         className={`hidden h-[100vh] w-[200px] sm:w-[100px] sm:hover:[200px]  bg-[#8444df] hover:transition-all ease-linear delay-300 hover:w-[200px] duration-300 absolute  text-white md:flex items-center justify-between flex-col`}
         id="nav"
+        onMouseEnter={() => {
+          setisItemVisible(true);
+        }}
+        onMouseLeave={() => {
+          setisItemVisible(false);
+        }}
       >
         <div className="bg-[#773dc8] h-28 flex items-center justify-center text-2xl min-w-full">
           MFK
@@ -61,6 +47,7 @@ const Header = () => {
               className={`   ${
                 isItemVisible ? "visible" : "invisible"
               }  mt-1 w-[100px] delay-300 text-start`}
+              onMouseEnter={() => {}}
             >
               HOME
             </h1>
@@ -132,7 +119,9 @@ const Header = () => {
 
       {/* Small-Screen-Nav-Start */}
       <div
-        className={`md:hidden h-[100vh] transition-all ease-linear delay-300 ${currentMenu} duration-200 w-[200px] bg-[#8444df] absolute  text-white flex items-center justify-between flex-col`}
+        className={`md:hidden h-[100vh] transition-all ease-linear delay-300 ${
+          isMenuOpen ? "-translate-x-[0px]" : "-translate-x-[350px]"
+        } duration-200 w-[200px] bg-[#8444df] absolute  text-white flex items-center justify-between flex-col`}
         id="nav"
       >
         <div className="bg-[#773dc8] h-28 flex items-center justify-center text-2xl min-w-full">
