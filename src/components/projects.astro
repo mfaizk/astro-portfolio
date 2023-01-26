@@ -1,0 +1,121 @@
+---
+import resumeBuilder from "../assets/projectAssets/resume-builder.png";
+import scommerce from "../assets/projectAssets/scommerce.png";
+import shopify from "../assets/projectAssets/shopify.png";
+import stranger from "../assets/projectAssets/signup-xl.png";
+const { id } = Astro.props;
+import "@fontsource/poppins";
+import "@fontsource/orbitron";
+
+const skillData = [
+  {
+    image: resumeBuilder,
+    heading: "Resume Builder",
+    subheading: "Technologies Used",
+    technologies: "ReactJs , ExpressJs , Mongoose , MongoDB",
+    listitem: [
+      "Completely built with hooks and functional components",
+      'Emulates time passage, and stock prices update randomly as each "day" passes',
+    ],
+    url: {
+      live: "#",
+      repo: "#",
+    },
+  },
+  {
+    image: scommerce,
+    heading: "Scommerce",
+    subheading: "Technologies Used",
+    technologies: "ReactJs , TailwindCSS , Zustand",
+    listitem: [
+      "Completely built with hooks and functional components",
+      'Emulates time passage, and stock prices update randomly as each "day" passes',
+    ],
+    url: {
+      live: "#",
+      repo: "#",
+    },
+  },
+  {
+    image: shopify,
+    heading: "Shopify Clone",
+    subheading: "Technologies Used",
+    technologies: "HTML , TailwindCSS",
+    listitem: [
+      "Completely built with hooks and functional components",
+      'Emulates time passage, and stock prices update randomly as each "day" passes',
+    ],
+    url: {
+      live: "#",
+      repo: "#",
+    },
+  },
+  {
+    image: stranger,
+    heading: "Starnger-Store",
+    subheading: "Technologies Used",
+    technologies: "ReactJs , Firebase , Zustand",
+    listitem: [
+      "Completely built with hooks and functional components",
+      'Emulates time passage, and stock prices update randomly as each "day" passes',
+    ],
+    url: {
+      live: "#",
+      repo: "#",
+    },
+  },
+];
+---
+
+<div
+  id={id}
+  class="bg-[#f7f7f7] mx-auto flex items-center justify-center flex-col mt-[250px]"
+>
+  <div
+    class="flex flex-row items-center justify-center text-[#333333] ml-3 gap-5 self-start relative right-[0px] xl:left-[450px] md:left-[150px] lg:right-[900px]"
+  >
+    <div class="w-[30px] h-[1px] bg-black rounded-xl min-w-fit"></div>
+    <h1 class="text-[13px] font-serif">TAKE A LOOK AT MY</h1>
+  </div>
+  <h1
+    class="flex flex-row items-center justify-center text-[#333333] ml-3 self-start relative right-[0px] xl:left-[450px] md:left-[150px] lg:right-[900px] text-3xl mt-4"
+  >
+    PROJECTS
+  </h1>
+  <div
+    class="max-w-[900px] bg-[#fff] mt-10 sm:text-2xl text-[#333333] md:p-10 md:rounded-3xl shadow border text-xl font-[10px] flex flex-col gap-10"
+  >
+    {
+      skillData.map((e, i) => (
+        // <!-- card-start -->
+        <div class="flex flex-col justify-center items-start gap-5 font-[Poppins] shadow transition-all delay-150 ease-linear hover:shadow-2xl duration-300 md:p-4 rounded-2xl md:flex-row md:h-[300px] h-auto">
+          <div class="p-4 md:p-0">
+            <img
+              src={e.image}
+              alt=""
+              class="h-52 md:h-36 m-0 md:m-6 self-center md:self-start mt-3"
+            />
+          </div>
+          <div class="w-[100vw] md:w-[550px] p-7 md:p-0 md:mx-10 flex flex-col items-start justify-between  h-[100%] ">
+            <div>
+              <h1 class="font-semibold text-2xl">{e.heading}</h1>
+              <h2 class="text-[15px] text-[#444444] font-bold">
+                {e.subheading}{" "}
+                <span class="text-[#8444df]">{e.technologies}</span>
+              </h2>
+              <ul class="list-disc text-[15px] font-semibold">
+                <li>{e.listitem[0]}</li>
+                <li>{e.listitem[0]}</li>
+              </ul>
+            </div>
+            <div class="text-[#8444df] flex gap-6 underline ">
+              <a href={e.url.live}>Live</a>
+              <a href={e.url.repo}>Repo</a>
+            </div>
+          </div>
+        </div>
+        //  card end
+      ))
+    }
+  </div>
+</div>
