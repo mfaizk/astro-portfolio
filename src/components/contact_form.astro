@@ -1,0 +1,104 @@
+---
+const { id } = Astro.props;
+import "@fontsource/poppins";
+import calendar from "../assets/calendar.svg";
+import envelope from "../assets/envelope.svg";
+---
+
+<div
+  id={id}
+  class="bg-[#f7f7f7] mx-auto flex items-center justify-center flex-col mt-[250px]"
+>
+  <div
+    class="flex flex-row items-center justify-center text-[#333333] ml-3 gap-5 self-start relative right-[0px] xl:left-[450px] md:left-[150px] lg:right-[900px]"
+  >
+    <div class="w-[30px] h-[1px] bg-black rounded-xl min-w-fit"></div>
+    <h1 class="text-[13px] font-serif">SAY HELLO</h1>
+  </div>
+  <h1
+    class="flex flex-row items-center justify-center text-[#333333] ml-3 self-start relative right-[0px] xl:left-[450px] md:left-[150px] lg:right-[900px] text-3xl mt-4"
+  >
+    CONTACT
+  </h1>
+  <div
+    class="w-[100%] tab:max-w-[900px] bg-[#f7f7f7] md:bg-[#ffffff] mt-10 sm:text-2xl font-serif text-[#333333] p-10 rounded-3xl md:shadow md:border text-xl font-[10px]"
+  >
+    <div class="font-[Poppins]">
+      <h1 class="mb-5 text-[19px] text-[#333333] font-semibold">
+        Get in Touch
+      </h1>
+      <div class="flex gap-[20px] md:flex-row flex-col">
+        <!-- card-start -->
+        <div
+          class="flex grow flex-col justify-center items-center min-w-[200px] tab:min-w-[400px] py-6 transition-all ease-linear delay-150 shadow border hover:shadow-2xl duration-300 rounded"
+        >
+          <div class="bg-[#f3f9f4] p-4">
+            <img src={envelope} alt="" class="h-8" />
+          </div>
+          <a href="" class="text-[#333333] text-[15px] font-semibold underline"
+            >suneater1413@gmail.com</a
+          >
+          <h1 class="text-[#5f6f81] text-[12px] font-bold">Email me</h1>
+        </div>
+        <!-- card-end -->
+        <!-- card-start -->
+        <div
+          class="flex grow flex-col justify-center items-center min-w-[200px] tab:min-w-[400px] py-6 transition-all ease-linear delay-150 shadow border hover:shadow-2xl duration-300 rounded"
+        >
+          <div class="bg-[#e7effa] p-4">
+            <img src={calendar} alt="" class="h-8" />
+          </div>
+          <a href="" class="text-[#333333] text-[15px] font-semibold underline"
+            >Calendly</a
+          >
+          <h1 class="text-[#5f6f81] text-[12px] font-bold">
+            Schedule a Meeting
+          </h1>
+        </div>
+        <!-- card-end -->
+      </div>
+
+      <form
+        action="https://formspree.io/f/mzbqdzby"
+        method="post"
+        class="flex flex-col gap-6"
+      >
+        <h1 class="text-[19px] font-bold mt-6">Contact Form</h1>
+
+        <div
+          class="flex items-center justify-between md:flex-row flex-col gap-6"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name*"
+            class="border w-[100%] md:w-[49%] placeholder:text-[#6c757d] placeholder:text-[18px] placeholder:font-bold px-4 py-2"
+          />
+          <input
+            type="text"
+            name="email"
+            placeholder="Your Email*"
+            class="border w-[100%] md:w-[49%] placeholder:text-[#6c757d] placeholder:text-[18px] placeholder:font-bold px-4 py-2"
+          />
+        </div>
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject*"
+          class="border flex-grow placeholder:text-[#6c757d] placeholder:text-[18px] placeholder:font-bold px-4 py-2"
+        />
+        <input
+          type="text"
+          name="message"
+          placeholder="Your Message*"
+          class="border flex-grow placeholder:text-[#6c757d] placeholder:text-[18px] placeholder:font-bold px-4 py-2"
+        />
+        <button
+          type="submit"
+          class="h-[40px] w-[100px] bg-[#8444df] text-sm text-white rounded-3xl self-center"
+          >Send</button
+        >
+      </form>
+    </div>
+  </div>
+</div>
