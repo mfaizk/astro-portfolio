@@ -2,7 +2,7 @@
 import resumeBuilder from "../assets/projectAssets/resume-builder.png";
 import scommerce from "../assets/projectAssets/scommerce.png";
 import shopify from "../assets/projectAssets/shopify.png";
-import stranger from "../assets/projectAssets/signup-xl.png";
+import stranger from "../assets/projectAssets/stranger.png";
 const { id } = Astro.props;
 import "@fontsource/poppins";
 import "@fontsource/orbitron";
@@ -19,7 +19,7 @@ const skillData = [
     ],
     url: {
       live: "#",
-      repo: "#",
+      repo: "https://github.com/jatin2311/Resume-Hub-Resume-Builder-",
     },
   },
   {
@@ -32,8 +32,8 @@ const skillData = [
       'Emulates time passage, and stock prices update randomly as each "day" passes',
     ],
     url: {
-      live: "#",
-      repo: "#",
+      live: "https://scommerce1.netlify.app/",
+      repo: "https://github.com/mfaizk/scommmerce",
     },
   },
   {
@@ -46,8 +46,8 @@ const skillData = [
       'Emulates time passage, and stock prices update randomly as each "day" passes',
     ],
     url: {
-      live: "#",
-      repo: "#",
+      live: "https://shopify-1.netlify.app/",
+      repo: "https://github.com/mfaizk/shopify-clone",
     },
   },
   {
@@ -61,7 +61,7 @@ const skillData = [
     ],
     url: {
       live: "#",
-      repo: "#",
+      repo: "https://github.com/mfaizk/stragersstore",
     },
   },
 ];
@@ -109,8 +109,12 @@ const skillData = [
               </ul>
             </div>
             <div class="text-[#8444df] flex gap-6 underline ">
-              <a href={e.url.live}>Live</a>
-              <a href={e.url.repo}>Repo</a>
+              <a href={e.url.live} target="_blank">
+                Live
+              </a>
+              <a href={e.url.repo} target="_blank">
+                Repo
+              </a>
             </div>
           </div>
         </div>
